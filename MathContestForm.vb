@@ -2,11 +2,10 @@
 'RCET0265
 'Spring 2021
 'Math Contest
-'
+'https://github.com/PeckBray/Math_Contest
 Option Strict On
 Option Explicit On
 Public Class MathContestForm
-
     Private Sub MathContestForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         StudentAnswerTextBox.Enabled = False
         SubmitButton.Enabled = False
@@ -15,7 +14,6 @@ Public Class MathContestForm
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
         Me.Close()
     End Sub
-
     Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles ClearButton.Click
         NameTextBox.Text = ""
         AgeTextBox.Text = ""
@@ -28,7 +26,6 @@ Public Class MathContestForm
         StudentAnswerTextBox.Enabled = False
         SubmitButton.Enabled = False
     End Sub
-
     Private Sub MathProblemGroupBox_TextChanged(sender As Object, e As EventArgs) Handles MathProblemGroupBox.TextChanged
         If FirstNumberTextBox.Text = "" And SecondNumberTextBox.Text = "" Then
             StudentAnswerTextBox.Enabled = False
@@ -36,11 +33,6 @@ Public Class MathContestForm
             StudentAnswerTextBox.Enabled = True
         End If
     End Sub
-
-
-
-
-
     Private Sub FirstNumberTextBox_TextChanged(sender As Object, e As EventArgs) Handles FirstNumberTextBox.TextChanged, SecondNumberTextBox.TextChanged
         Dim number1 As Boolean = NumberValidation(FirstNumberTextBox.Text)
         Dim number2 As Boolean = NumberValidation(SecondNumberTextBox.Text)
@@ -54,8 +46,6 @@ Public Class MathContestForm
     Private Sub StudentAnswerTextBox_TextChanged(sender As Object, e As EventArgs) Handles StudentAnswerTextBox.TextChanged
         SubmitButton.Enabled = True
     End Sub
-
-
     Function NumberValidation(input As String) As Boolean
         Dim number As Integer
         Dim conversion As Boolean = False
@@ -115,14 +105,10 @@ Public Class MathContestForm
             MathCheck()
         End If
     End Sub
-
     Private Sub SummeryButton_Click(sender As Object, e As EventArgs) Handles SummeryButton.Click
         MathCheck()
     End Sub
     Sub MathCheck()
-
-
-
         Static attempts As Integer
         Static correctResponses As Integer
 
